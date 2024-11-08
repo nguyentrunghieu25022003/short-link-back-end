@@ -1,5 +1,6 @@
 # Node modules directory
 node_modules/
+!node_modules/puppeteer/.local-chromium
 
 # Build directories
 build/
