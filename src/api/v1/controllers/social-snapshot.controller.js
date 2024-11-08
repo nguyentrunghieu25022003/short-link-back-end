@@ -35,17 +35,17 @@ module.exports.handleCrawlDataByUsername = async (req, res) => {
         "--disable-gpu",
         "--no-zygote",
         "--single-process",
-        `--proxy-server=${config.proxy.http}`,
+        /* `--proxy-server=${config.proxy.http}`, */
       ],
     });
 
     const page = await browser.newPage();
-    if (config.proxy.username && config.proxy.password) {
+    /* if (config.proxy.username && config.proxy.password) {
       await page.authenticate({
         username: config.proxy.username,
         password: config.proxy.password,
       });
-    }
+    } */
 
     const url = `${process.env.FACEBOOK_URL}/login/identify/?ctx=recover&from_login_screen=0`;
     await page.goto(url, {
@@ -143,17 +143,17 @@ module.exports.handleCrawlDataByUserId = async (req, res) => {
         "--disable-gpu",
         "--no-zygote",
         "--single-process",
-        `--proxy-server=${config.proxy.http}`,
+        /* `--proxy-server=${config.proxy.http}`, */
       ],
     });
 
     const page = await browser.newPage();
-    if (config.proxy.username && config.proxy.password) {
+    /* if (config.proxy.username && config.proxy.password) {
       await page.authenticate({
         username: config.proxy.username,
         password: config.proxy.password,
       });
-    }
+    } */
     const url = `${process.env.FACEBOOK_URL}/login`;
     await page.goto(url, {
       waitUntil: "networkidle2",

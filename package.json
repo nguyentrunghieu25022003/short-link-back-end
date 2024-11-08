@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "src/main.js",
   "scripts": {
+    "install": "apt-get update && apt-get install -y libnss3 libxss1 libasound2",
     "start": "node src/main.js",
     "dev": "nodemon --inspect src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
