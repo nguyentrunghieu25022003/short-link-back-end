@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const puppeteer = require("puppeteer");
 const { sleep } = require("../../../helper/sleep");
 const SocialSnapshot = require("../../../models/social-snapshot.model");
 const { launchBrowserWithRetry } = require("../../../helper/retryApi");
